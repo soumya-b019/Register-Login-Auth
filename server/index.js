@@ -12,7 +12,7 @@ const db = mysql.createConnection({
     host: "localhost",
     password: "root",
     database: "register_login"
-})
+});
 
 app.post('/register', (req,res) => {
 
@@ -24,7 +24,7 @@ app.post('/register', (req,res) => {
     (err, result) => {
         console.log(err);
     }
-})
+});
 
 app.post('/login', (req,res) => {
 
@@ -45,7 +45,7 @@ app.post('/login', (req,res) => {
             res.send({message: "Wrong username/password combination"});
         }
     }
-})
+});
 
 app.listen(3001, () => {
     console.log("running server");
